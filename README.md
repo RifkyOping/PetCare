@@ -64,7 +64,7 @@
 | Nama Field | Tipe Data | Keterangan                     |
 |------------|-----------|--------------------------------|
 | id         | INT       | Primary key                    |
-| user_id    | INT       | Foreign key                    |
+| pengguna_id    | INT       | Foreign key                    |
 | nama       | STRING    | Nama Hewan                     |
 | jenis      | STRING    | Jenis Hewan (Kucing, Anjing)  |
 | umur       | INT       | Umur Hewan                     |
@@ -74,7 +74,7 @@
 | Nama Field | Tipe Data | Keterangan                     |
 |------------|-----------|--------------------------------|
 | id         | INT       | Primary key                    |
-| user_id    | INT       | Foreign key                    |
+| penggun_id    | INT       | Foreign key                    |
 | dokter_id  | INT       | Foreign key                    |
 | hewan_id   | INT       | Foreign key                    |
 | tanggal_janji | DATETIME | Tanggal Janji Temu          |
@@ -84,13 +84,13 @@
 | Nama Field | Tipe Data | Keterangan                     |
 |------------|-----------|--------------------------------|
 | id         | INT       | Primary key                    |
-| janjiTemu_id | INT     | Foreign key                    |
+| janji_temu_id | INT     | Foreign key                    |
 | keluhan    | TEXT      | Deskripsi Umum                 |
 | diagnosa   | TEXT      | Hasil Diagnosa Dokter          |
 | tindakan    | TEXT      | Hasil Tindakan Dokter          |
 | resep      | TEXT      | Obat yang Diresepkan           |
 
-### Tabel: Jadwal Dokter
+### Tabel: Jadwal Praktik
 | Nama Field | Tipe Data | Keterangan                     |
 |------------|-----------|--------------------------------|
 | id         | INT       | Primary key                    |

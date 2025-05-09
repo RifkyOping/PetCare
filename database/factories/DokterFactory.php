@@ -22,19 +22,15 @@ class DokterFactory extends Factory
             'password' => bcrypt('password123'),
             'no_telepon' => $this->faker->phoneNumber(),
             'keahlian' => $this->faker->randomElement([
-                    'Pemeriksaan Kesehatan Hewan',
-                    'Bedah Hewan',
-                    'Perawatan Gigi Hewan',
-                    'Vaksinasi Hewan',
-                    'Pengobatan Penyakit Hewan',
-                    'Reproduksi Hewan',
-                    'Diagnosa dan Terapi Penyakit Parasit',
-                    'Ekspresionisme Hewan',
-                    'Kardiologi Hewan',
-                    'Onkologi Hewan',
-                    'Anestesiologi Hewan',
-                    'Orthopedi Hewan',
-                    'Ginekologi Hewan'
+                    'Anjing, Kucing',
+                    'Burung, kelelawar',
+                    'Domba, kuda, Sapi, Kambing',
+                    'Reptil',
+                    'Kelinci, Hamster',
+                    'Kura-kura, Landak',
+                    'Ikan',
+                    'Cicak, Gecko, Kodok/Katak',
+                    'Armadillo',
                 ]),
         ];
     }

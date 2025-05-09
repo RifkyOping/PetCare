@@ -104,5 +104,6 @@
 - **Pengguna - Janji Temu**: One to Many (Satu pengguna bisa memiliki banyak janji temu)
 - **Dokter - Janji Temu**: One to Many (Satu dokter bisa melayani banyak janji temu)
 - **Hewan - Janji Temu**: One to Many (Satu Hewan bisa memiliki banyak janji temu)
-- **Janji Temu - Rekam Medis**: One to One (Satu Janji Temu hanya bisa memiliki rekam medis)
+- **Janji Temu - Rekam Medis**: One to One (Satu Janji Temu hanya bisa memiliki satu rekam medis)
 - **Dokter - Jadwal**: One to Many (Satu Dokter bisa memiliki banyak Jadwal)
+- **Dokter - Hewan**: Many to Many (Banyak Dokter bisa memeriksa banyak Hewan begitu pula sebaliknya)

@@ -55,6 +55,7 @@
 |------------|-----------|--------------------------------|
 | id         | INT       | Primary key                    |
 | nama       | STRING    | Nama Dokter                    |
+| alamat       | STRING    | Alamat Dokter                    |
 | email      | STRING    | Email Dokter                   |
 | password   | STRING    | Password Dokter                |
 | no_telepon | STRING    | Nomor Telepon Dokter           |

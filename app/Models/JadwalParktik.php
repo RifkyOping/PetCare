@@ -11,4 +11,10 @@ class JadwalParktik extends Model
     use HasFactory;
     protected $table = 'jadwal_praktik';
     protected $fillable = ['dokter_id', 'hari'];
+
+    public function dokter()
+    {
+        return $this->belongsTo(Dokter::class);
+    }
+
 }

@@ -3,20 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Hewan;
+use App\Models\Dokter;
 
-class Dashboard extends Controller
+class DokterController extends Controller
 {
-    public function dash()
+    /**
+     * Display a listing of the resource.
+     */
+    public function dokterSpesialis()
     {
-        return view('dashboard');
+        $data = Dokter::all();
+        return view('Dokter.dokterSpesialis', compact('data'));
     }
 
-
-    public function anjing()
+    public function dokterUmum()
     {
-        $hewan = Hewan::all();
-        return view('Dokter.dokterUmum', compact('hewan'));
+        $data = Dokter::all();
+        return view('Dokter.dokterUmum', compact('data'));
     }
 
 
@@ -39,9 +42,10 @@ class Dashboard extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $data = Dokter::with('jadwalPraktik')->findOrFail($id);
+        return view('Dokter.detailDokter', compact('data'));
     }
 
     /**

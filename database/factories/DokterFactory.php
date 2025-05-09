@@ -18,10 +18,11 @@ class DokterFactory extends Factory
     {
         return [
             'nama' => $this->faker->name(),
+            'alamat' => $this->faker->address(),
             'email' => $this->faker->unique()->safeEmail(),
             'password' => bcrypt('password123'),
             'no_telepon' => $this->faker->phoneNumber(),
-            'keahlian' => $this->faker->randomElement([
+            'spesialisasi' => $this->faker->randomElement([
                     'Anjing, Kucing',
                     'Burung, kelelawar',
                     'Domba, kuda, Sapi, Kambing',

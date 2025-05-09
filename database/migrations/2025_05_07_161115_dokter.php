@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('dokter', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->string('Alamat');
             $table->String('email');
             $table->String('password');
             $table->String('no_telepon');
-            $table->String('keahlian');
+            $table->String('spesialisasi');
             $table->timestamps();
         });
     }

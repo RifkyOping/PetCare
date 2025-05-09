@@ -28,6 +28,7 @@
                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                     <a class="nav-link" href="">Anjing</a>
                     <a class="nav-link" href="">Kucing</a>
+                    <a class="nav-link" href=""><i class="fas fa-plus"></i></a>
                 </nav>
             </div>
             <div class="sb-sidenav-menu-heading">Addons</div>

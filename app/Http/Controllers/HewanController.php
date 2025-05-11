@@ -10,14 +10,14 @@ class HewanController extends Controller
 
     public function show()
     {
-        $dataHewan = Hewan::all();
-        return view('layout.sidebar', compact('dataHewan'));
+        // $dataHewan = Hewan::all();
+        // return view('layout.sidebar');
     }
 
     public function detail($id)
     {
-        $dataHewan = Hewan::findOrFail($id);
-        return view('Hewan.detailHewan', compact('dataHewan'));
+        $detailHewan = Hewan::findOrFail($id);
+        return view('Hewan.detailHewan', compact('detailHewan'));
     }
     // public function sidebar()
     // {

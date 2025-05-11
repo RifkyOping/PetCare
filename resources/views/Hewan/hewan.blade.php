@@ -22,8 +22,8 @@
                         <a href="#" class="btn btn-sm btn-outline-primary"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="btn btn-sm btn-outline-primary"><i class="fab fa-whatsapp"></i></a>
                     </div>
-                    {{-- <a href="{{ route('hewan.show', $h->id) }}" class="btn btn-sm btn-primary">Lihat Profil</a> --}}
-                    <pre>{{ dd($hewan) }}</pre>
+                    <a href="{{ route('hewan.show', $h->id) }}" class="btn btn-sm btn-primary">Lihat Profil</a>
+                    {{-- <pre>{{ dd($hewan) }}</pre> --}}
                 </div>
             </div>
         </div>

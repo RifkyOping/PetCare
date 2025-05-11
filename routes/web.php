@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AutentikasiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\DokterController;
@@ -17,3 +18,5 @@ Route::get('/spesialis/{id}', [DokterController::class, 'show'])->name('spesiali
 Route::get('/hewan/{jenis}', [HewanController::class, 'filterByJenis'])->name('hewan.jenis');
 Route::get('/detailHewan/{id}', [HewanController::class, 'detail'])->name('hewan.show');
 // Route::get('/hewan', [HewanController::class, 'show']);
+
+Route::get('/login', [AutentikasiController::class, 'index']);

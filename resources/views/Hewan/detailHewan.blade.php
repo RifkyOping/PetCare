@@ -16,11 +16,13 @@
                 <div class="card-body text-center">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
                         class="rounded-circle img-fluid" style="width: 150px;">
-                    <h5 class="my-3">{{ $dataHewan->nama }}</h5>
+                        <br>
+                        <br>
+                    {{-- <h5 class="my-3"></h5> --}}
                     <div class="d-flex justify-content-center gap-2 mb-2">
                         <a href="#" class="btn btn-sm btn-outline-primary"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="btn btn-sm btn-outline-primary"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="btn btn-sm btn-outline-primary"><i class="fab fa-whatsapp"></i></a>
+                        {{-- <a href="#" class="btn btn-sm btn-outline-primary"><i class="fab fa-whatsapp"></i></a> --}}
                     </div>
                     {{-- <div class="d-flex justify-content-center mb-2">
                         <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Follow</button>
@@ -37,7 +39,7 @@
                             <p class="mb-0">Full Name</p>
                         </div>
                         <div class="col-sm-9">
-                            <p class="text-muted mb-0">{{ $dataHewan->nama }}</p>
+                            <p class="text-muted mb-0">{{ $detailHewan->nama }}</p>
                         </div>
                     </div>
                     <hr>
@@ -46,7 +48,7 @@
                             <p class="mb-0">Jenis</p>
                         </div>
                         <div class="col-sm-9">
-                            <p class="text-muted mb-0">{{ $dataHewan->jenis }}</p>
+                            <p class="text-muted mb-0">{{ $detailHewan->jenis }}</p>
                         </div>
                     </div>
                     <hr>
@@ -55,7 +57,7 @@
                             <p class="mb-0">Umur</p>
                         </div>
                         <div class="col-sm-9">
-                            <p class="text-muted mb-0">{{ $dataHewan->umur }}-Bulan</p>
+                            <p class="text-muted mb-0">{{ $detailHewan->umur }} Bulan</p>
                         </div>
                     </div>
                     <hr>
@@ -64,7 +66,7 @@
                             <p class="mb-0">Jenis Kelamin</p>
                         </div>
                         <div class="col-sm-9">
-                            <p class="text-muted mb-0">{{ $dataHewan->jenis_kelamin }}</p>
+                            <p class="text-muted mb-0">{{ $detailHewan->jenis_kelamin }}</p>
                         </div>
                     </div>
                 </div>

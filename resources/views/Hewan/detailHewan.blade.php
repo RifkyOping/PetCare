@@ -16,7 +16,7 @@
                 <div class="card-body text-center">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
                         class="rounded-circle img-fluid" style="width: 150px;">
-                    <h5 class="my-3">{{ explode(' ', $data->nama)[0] }}</h5>
+                    <h5 class="my-3">{{ $dataHewan->nama }}</h5>
                     <div class="d-flex justify-content-center gap-2 mb-2">
                         <a href="#" class="btn btn-sm btn-outline-primary"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="btn btn-sm btn-outline-primary"><i class="fab fa-instagram"></i></a>
@@ -37,51 +37,34 @@
                             <p class="mb-0">Full Name</p>
                         </div>
                         <div class="col-sm-9">
-                            <p class="text-muted mb-0">{{ $data->nama }}</p>
+                            <p class="text-muted mb-0">{{ $dataHewan->nama }}</p>
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">
-                            <p class="mb-0">Email</p>
+                            <p class="mb-0">Jenis</p>
                         </div>
                         <div class="col-sm-9">
-                            <p class="text-muted mb-0">{{ $data->email }}</p>
+                            <p class="text-muted mb-0">{{ $dataHewan->jenis }}</p>
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">
-                            <p class="mb-0">Phone</p>
+                            <p class="mb-0">Umur</p>
                         </div>
                         <div class="col-sm-9">
-                            <p class="text-muted mb-0">{{ $data->no_telepon }}</p>
+                            <p class="text-muted mb-0">{{ $dataHewan->umur }}-Bulan</p>
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">
-                            <p class="mb-0">Spesialis</p>
+                            <p class="mb-0">Jenis Kelamin</p>
                         </div>
                         <div class="col-sm-9">
-                            <p class="text-muted mb-0">{{ $data->spesialisasi }}</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <p class="mb-0">Jadwal Praktik</p>
-                        </div>
-                        <div class="col-sm-9">
-                            @if($data->jadwalPraktik->isEmpty())
-                                <p class="text-muted mb-0">Tidak ada jadwal praktik</p>
-                            @else
-                                <span class="text-muted mb-0">
-                                    @foreach ($data->jadwalPraktik as $jadwal)
-                                        {{ ($jadwal->hari) }}@if(!$loop->last) - @endif
-                                    @endforeach
-                                </span>
-                            @endif
+                            <p class="text-muted mb-0">{{ $dataHewan->jenis_kelamin }}</p>
                         </div>
                     </div>
                 </div>

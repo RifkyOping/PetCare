@@ -10,13 +10,13 @@ class DokterController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function dokterSpesialis()
+    public function spesialis()
     {
         $data = Dokter::all();
         return view('Dokter.dokterSpesialis', compact('data'));
     }
 
-    public function dokterUmum()
+    public function umum()
     {
         $data = Dokter::all();
         return view('Dokter.dokterUmum', compact('data'));

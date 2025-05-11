@@ -26,8 +26,9 @@
             </a>
             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                    <a class="nav-link" href="">Anjing</a>
-                    <a class="nav-link" href="">Kucing</a>
+                    @foreach ($dataHewan as $d)
+                        <a class="nav-link" href="{{ route('hewan.jenis', ['jenis' => $d->jenis]) }}">{{ $d->jenis }}</a>
+                    @endforeach
                     <a class="nav-link" href=""><i class="fas fa-plus"></i></a>
                 </nav>
             </div>

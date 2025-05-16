@@ -2,16 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pengguna;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class Autentikasi extends Controller
+class PenggunaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    // public function index()
+    // {
+    //     return view('Pengguna.profilPengguna');
+    // }
+
+    public function detail()
     {
-        //
+        $pengguna = Auth::user();
+        return view('Pengguna.profilPengguna', compact('pengguna'));
     }
 
     /**

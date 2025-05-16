@@ -7,7 +7,7 @@
 <ol class="breadcrumb mb-4">
     <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ url('/dashboard') }}">Dashboard</a></li>
     <li class="breadcrumb-item active"><a class="text-decoration-none" href="{{ url('/spesialis') }}">Spesialis</a></li>
-    <li class="breadcrumb-item active"><a class="text-decoration-none" href="#">Profil</a></li>
+    <li class="breadcrumb-item active"><a class="text-decoration-none" href="{{ route('spesialis.show', $data->id) }}">Detail</a></li>
 </ol>
 <section style="background-color: #ffffff;">
     <div class="row">

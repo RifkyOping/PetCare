@@ -1,108 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <div class="card" style="width: 18rem;">
-  <div class="card-body">
-   <!-- Section: Design Block -->
-<section class="">
-  <!-- Jumbotron -->
-  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
-    <div class="container">
-      <div class="row gx-lg-5 align-items-center">
-        <div class="col-lg-6 mb-5 mb-lg-0">
-          <h1 class="my-5 display-3 fw-bold ls-tight">
-            The best offer <br />
-            <span class="text-primary">for your business</span>
-          </h1>
-          <p style="color: hsl(217, 10%, 50.8%)">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Eveniet, itaque accusantium odio, soluta, corrupti aliquam
-            quibusdam tempora at cupiditate quis eum maiores libero
-            veritatis? Dicta facilis sint aliquid ipsum atque?
-          </p>
-        </div>
-
-        <div class="col-lg-6 mb-5 mb-lg-0">
-          <div class="card">
-            <div class="card-body py-5 px-md-5">
-              <form>
-                <!-- 2 column grid layout with text inputs for the first and last names -->
-                <div class="row">
-                  <div class="col-md-6 mb-4">
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form3Example1" class="form-control" />
-                      <label class="form-label" for="form3Example1">First name</label>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Login</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="bg-primary">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container" style="margin-top: 120px">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5">
+                                @if (session()->has('Error'))
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        {{ session('Error') }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                                    </div>
+                                @endif
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                                    <div class="card-body">
+                                        <form method="POST" action="{{ route('login.submit') }}">
+                                            @csrf
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control @error('email') is-invalid @enderror" id="inputEmail" type="email" placeholder="name@gmail.com" name="email" autofocus required value="{{ old('email') }}">
+                                                <label for="inputEmail">Email address</label>
+                                                @error('email')
+                                                    <div style="color: red" class="incalid-veedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="inputPassword" type="password" placeholder="Password" name="password" required>
+                                                <label for="inputPassword">Password</label>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                                <a class="small" href="password.html">Forgot Password?</a>
+                                                <button type="submit" class="btn btn-primary">Login</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer text-center py-3">
+                                        <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-md-6 mb-4">
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form3Example2" class="form-control" />
-                      <label class="form-label" for="form3Example2">Last name</label>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Email input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="email" id="form3Example3" class="form-control" />
-                  <label class="form-label" for="form3Example3">Email address</label>
-                </div>
-
-                <!-- Password input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="password" id="form3Example4" class="form-control" />
-                  <label class="form-label" for="form3Example4">Password</label>
-                </div>
-
-                <!-- Checkbox -->
-                <div class="form-check d-flex justify-content-center mb-4">
-                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                  <label class="form-check-label" for="form2Example33">
-                    Subscribe to our newsletter
-                  </label>
-                </div>
-
-                <!-- Submit button -->
-                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
-                  Sign up
-                </button>
-
-                <!-- Register buttons -->
-                <div class="text-center">
-                  <p>or sign up with:</p>
-                  <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-facebook-f"></i>
-                  </button>
-
-                  <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-google"></i>
-                  </button>
-
-                  <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-twitter"></i>
-                  </button>
-
-                  <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-github"></i>
-                  </button>
-                </div>
-              </form>
+                </main>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- Jumbotron -->
-</section>
-<!-- Section: Design Block -->
-  </div>
-</div>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+    </body>
 </html>

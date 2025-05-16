@@ -23,6 +23,5 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         View::share('dataHewan', Hewan::select('jenis')->distinct()->get());
-
     }
 }

@@ -33,18 +33,21 @@
                 </nav>
             </div>
             <div class="sb-sidenav-menu-heading">Addons</div>
-            <a class="nav-link" href="#">
-                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                Charts
+            <a class="nav-link" href="{{ url('/login') }}">
+                <div class="sb-nav-link-icon"><i class="fas fa-sign-in-alt"></i></div>
+                Login
             </a>
-            <a class="nav-link" href="#">
-                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                Tables
+            <a class="nav-link" href="{{ route('logout') }}">
+                <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
+                Logout
             </a>
+            {{-- <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit">Logout</button>
+            </form> --}}
         </div>
     </div>
     <div class="sb-sidenav-footer">
-        <div class="small">Logged in as:</div>
-        Admin
+        <div class="small">Logged in as : Admin</div>
     </div>
 </nav>

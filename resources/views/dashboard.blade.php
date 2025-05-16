@@ -9,6 +9,9 @@
 </ol>
 <div class="card mb-4">
     <div class="card-body">
+        @auth
+            <p>Welcome, {{ auth()->user()->nama }}</p>
+        @endauth
     </div>
 </div>
 @endsection
